@@ -35,5 +35,6 @@ locals {
     ]
   ], [var.vnet_subnet_id]))
   subnet_ids = toset([for id in local.potential_subnet_ids : id if id != null])
+  ebpf_data_plane = var.ebpf_data_plane == null ? null : "cilium"
 }
 
