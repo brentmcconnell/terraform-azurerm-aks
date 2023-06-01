@@ -372,6 +372,8 @@ resource "azurerm_kubernetes_cluster" "main" {
     outbound_type       = var.net_profile_outbound_type
     pod_cidr            = var.net_profile_pod_cidr
     service_cidr        = var.net_profile_service_cidr
+    ebpf_data_plane     = var.net_profile_ebpf_data_plane
+
 
     dynamic "load_balancer_profile" {
       for_each = var.load_balancer_profile_enabled && var.load_balancer_sku == "standard" ? [

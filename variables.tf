@@ -671,6 +671,12 @@ variable "net_profile_service_cidr" {
   description = "(Optional) The Network Range used by the Kubernetes service. Changing this forces a new resource to be created."
 }
 
+variable "net_profile_ebpf_data_plane" {
+  type        = string
+  default     = null
+  description = "(Optional) Can be used to setup Cilium."
+}
+
 variable "network_plugin" {
   type        = string
   default     = "kubenet"
