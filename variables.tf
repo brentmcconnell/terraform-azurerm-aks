@@ -672,7 +672,7 @@ variable "net_profile_service_cidr" {
 }
 
 variable "net_profile_ebpf_data_plane" {
-  type        = boolean 
+  type        = bool 
   default     = null
   description = "(Optional) Can be used to setup Cilium when network_plugin is azure."
 }
